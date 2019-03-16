@@ -36,7 +36,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/" />
 
-<meta property="og:updated_time" content="2019-03-17T10:26:19&#43;11:00"/>
+<meta property="og:updated_time" content="2019-03-17T10:32:05&#43;11:00"/>
 
 <meta itemprop="name" content="Limei&#39;s Blog">
 <meta itemprop="description" content="">
@@ -124,6 +124,30 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/russian-box/" class="color-inherit dim link">
+            Russian Box
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+           介绍  向左键、向右键，控制左右； 向上键，控制旋转；向下键，控制加速；空格键，暂停；Enter键，继续。 初始化30X30的游戏主界面，和7种图形数据结构； localStorage存储最高分数； 没有实现webSocket，暂时不能联机对战；  实现过程  设计整体结构； 定义样式，字体大小和颜色等； 游戏主界面canvas组件，由js动态生成； 绘制游戏底图画布canvas; 创建路径，利用for循环，绘制横向网格和纵向网格，关闭路径。根据设置的线宽和颜色，进行绘制。 定义7种模块的数据类型; 利用二维数组存储数据模型，每种模块由4个小方块构成，用参数x,y,color，表示每个方块的位置。 将所有二维网格都设定为0，表示小方块为默认底图画布。 初始化模块，随机得到7种模块的一种。 实现向左、向右、向下移动和旋转的逻辑; 向左向右，考虑边界值，更改小方块数值，表示网格被上色； 向下，考虑是否到底或碰到已有方块，停止移动。若到顶，用localStorage存储当前分数，并更新最大分数； 旋转，按90度逆时针转动。 结果发布界面，通过localStorage获取本地存储中的当前速度，当前分数、最大分数。 增加键盘监听，上下左右键，空格键，回车键。  
+        </div>
+          <a href="/posts/russian-box/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/git-install-offline/" class="color-inherit dim link">
             Git Install Noweb
             </a>
@@ -178,34 +202,25 @@
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/how-to-understand-package-json/" class="color-inherit dim link">
-            How to Understand Package JSON
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          package.json文件 对于自定义模块，需要package.json文件，用于描述模块。
-好处 1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载； 2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况； 3. 方便通过 npm publish 发布到NPM库，供别人下载使用。  生成package.json文件 ** npm init **
-This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &lt;pkg&gt;` afterwards to install a package and save it as a dependency in the package.
-        </div>
-          <a href="/posts/how-to-understand-package-json/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
+      
+      <section class="w-100">
+        <h1 class="f3">More</h1>
+        
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/how-to-understand-package-json/" class="link black dim">
+              How to Understand Package JSON
+            </a>
+          </h2>
+        
+
+        
+        
+          <a href="/posts/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Posts</a>
+        
+        </section>
       
 
       </div>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://localhost:1313/posts/russian-box/</loc>
+    <lastmod>2019-03-17T10:32:05+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/posts/git-install-offline/</loc>
     <lastmod>2019-03-17T10:26:19+11:00</lastmod>
   </url>
@@ -24,13 +29,13 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2019-03-17T10:26:19+11:00</lastmod>
+    <lastmod>2019-03-17T10:32:05+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2019-03-17T10:26:19+11:00</lastmod>
+    <lastmod>2019-03-17T10:32:05+11:00</lastmod>
     <priority>0</priority>
   </url>
   
