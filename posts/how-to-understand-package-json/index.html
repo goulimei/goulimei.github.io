@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Limei&#39;s Blog  | How to Understand Package JSON</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="How to Understand Package JSON" />
+<meta property="og:description" content="package.json文件 对于自定义模块，需要package.json文件，用于描述模块。
+好处 1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载； 2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况； 3. 方便通过 npm publish 发布到NPM库，供别人下载使用。  生成package.json文件 ** npm init **
+This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &lt;pkg&gt;` afterwards to install a package and save it as a dependency in the package." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/how-to-understand-package-json/" />
+<meta property="article:published_time" content="2019-03-17T10:06:45&#43;11:00"/>
+<meta property="article:modified_time" content="2019-03-17T10:06:45&#43;11:00"/>
+
+<meta itemprop="name" content="How to Understand Package JSON">
+<meta itemprop="description" content="package.json文件 对于自定义模块，需要package.json文件，用于描述模块。
+好处 1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载； 2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况； 3. 方便通过 npm publish 发布到NPM库，供别人下载使用。  生成package.json文件 ** npm init **
+This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &lt;pkg&gt;` afterwards to install a package and save it as a dependency in the package.">
+
+
+<meta itemprop="datePublished" content="2019-03-17T10:06:45&#43;11:00" />
+<meta itemprop="dateModified" content="2019-03-17T10:06:45&#43;11:00" />
+<meta itemprop="wordCount" content="275">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Understand Package JSON"/>
+<meta name="twitter:description" content="package.json文件 对于自定义模块，需要package.json文件，用于描述模块。
+好处 1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载； 2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况； 3. 方便通过 npm publish 发布到NPM库，供别人下载使用。  生成package.json文件 ** npm init **
+This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &lt;pkg&gt;` afterwards to install a package and save it as a dependency in the package."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://localhost:1313/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Limei&#39;s Blog
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">How to Understand Package JSON</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-03-17T10:06:45&#43;11:00">March 17, 2019</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h3 id="package-json文件">package.json文件</h3>
+
+<p>对于自定义模块，需要package.json文件，用于描述模块。</p>
+
+<h3 id="好处">好处</h3>
+
+<pre><code>1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载；
+2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况；
+3. 方便通过 npm publish 发布到NPM库，供别人下载使用。
+</code></pre>
+
+<h3 id="生成package-json文件">生成package.json文件</h3>
+
+<p>** npm init **</p>
+
+<pre><code>This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (react-test) react-test  ### 项目名称，必要字段  ###
+version: (1.0.0)                       ### 项目版本号，必要字段  ### 
+description: this is a react test      ### 项目描述   ### 
+entry point: (index.js)                ### 入口文件   ### 
+test command:                          ### 项目启动时的脚本命令  ### 
+git repository:                        ### 如果有git地址，可以将这个项目放到GIT仓库里  ### 
+keywords: react,key                    ### 关键词   ### 
+author: limeigou                       ### 作者    ### 
+license: (ISC)                         ### 发布时需要的证书   ### 
+
+About to write to /Users/gou/Desktop/gou/react-test/package.json:  ###  生成的package.json预览  ###
+
+{
+&quot;name&quot;: &quot;react-test&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;this is a react test&quot;,
+&quot;main&quot;: &quot;index.js&quot;,
+&quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+},
+&quot;keywords&quot;: [
+    &quot;react&quot;,
+    &quot;key&quot;
+],
+&quot;author&quot;: &quot;limeigou&quot;,
+&quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes) yes    ###   若符合预期，输入yes  ###
+</code></pre>
+
+<h3 id="属性说明">属性说明</h3>
+
+<pre><code>{
+&quot;name&quot;: &quot;react-test&quot;,                     ### 项目名称，必要字段  ###
+&quot;version&quot;: &quot;1.0.0&quot;,                       ### 项目版本号，必要字段  ###
+&quot;description&quot;: &quot;this is a react test&quot;,    ### 项目描述,可无   ###
+&quot;main&quot;: &quot;index.js&quot;,                       ### 模块的入口，知该载入哪个文件   ###
+&quot;scripts&quot;: {                              ### 项目启动时的脚本命令，npm run dev, npm run build  ### 
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;，
+    &quot;build&quot;: &quot;webpack&quot;,
+    &quot;dev&quot;: &quot;webpack-dev-server --hot&quot;
+},
+&quot;keywords&quot;: [                             ### 关键词,可无  ### 
+    &quot;react&quot;,
+    &quot;key&quot;
+],
+&quot;author&quot;: &quot;limeigou&quot;,                     ### 作者,可无   ###
+&quot;license&quot;: &quot;ISC&quot;，                        ### 发布时需要的证书   ###
+&quot;devDependencies&quot;: {                      ### 生产环境下，依赖的模块   ###
+    &quot;webpack&quot;: &quot;^4.29.5&quot;,
+    &quot;webpack-dev-server&quot;: &quot;^3.1.14&quot;
+}，
+&quot;dependencies&quot;: {                        ### 开发环境下，依赖的模块   ###
+    &quot;react&quot;: &quot;^15.6.2&quot;,
+    &quot;react-dom&quot;: &quot;^15.6.2&quot;
+}
+}
+</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy; 2019 Limei&#39;s Blog
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>
