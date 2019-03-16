@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Limei&#39;s Blog  | CSS Layout</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="CSS Layout" />
+<meta property="og:description" content="圣杯模型 圣杯模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染；在实际应用中，希望左右两边的高度，随中间的高度，自适应。
+ 通过类选择器，分别对center、left、right设置基础样式;其中left和right宽度固定，center宽度自适应（100%);
+ 让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷；
+ 此时，left排在了center后面，right排在了left后面；
+ 通过margin属性，将right向左移动left的宽度；
+ 此时，left和right压盖住了center，需要通过父级元素（padding-left，padding-right）预留出left和right的空间；
+ 再利用相对定位，使left和right回到预想位置；
+  html文件
+&lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;center&quot;&gt;center &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; &lt;/div&gt;  css文件
+.body{ min-width: 630px; } .container{ overflow: hidden; /* 清除浮动 */ padding-left: 100px; /* 为left留出空间 */ padding-right: 200px; /* 为right留出空间 */ } .center{ width: 100%; background-color: #fff144a6; } .left{ width: 100px; background-color: #33ff857a; margin-left: -100%; /* left排在了center后面，需要向左移动center的宽度*/ position: relative; left: -100px; /* 利用相对定位，使left回到预想位置 */ } ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/css-layout/" />
+<meta property="article:published_time" content="2019-03-17T10:09:15&#43;11:00"/>
+<meta property="article:modified_time" content="2019-03-17T10:09:15&#43;11:00"/>
+
+<meta itemprop="name" content="CSS Layout">
+<meta itemprop="description" content="圣杯模型 圣杯模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染；在实际应用中，希望左右两边的高度，随中间的高度，自适应。
+ 通过类选择器，分别对center、left、right设置基础样式;其中left和right宽度固定，center宽度自适应（100%);
+ 让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷；
+ 此时，left排在了center后面，right排在了left后面；
+ 通过margin属性，将right向左移动left的宽度；
+ 此时，left和right压盖住了center，需要通过父级元素（padding-left，padding-right）预留出left和right的空间；
+ 再利用相对定位，使left和right回到预想位置；
+  html文件
+&lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;center&quot;&gt;center &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; &lt;/div&gt;  css文件
+.body{ min-width: 630px; } .container{ overflow: hidden; /* 清除浮动 */ padding-left: 100px; /* 为left留出空间 */ padding-right: 200px; /* 为right留出空间 */ } .center{ width: 100%; background-color: #fff144a6; } .left{ width: 100px; background-color: #33ff857a; margin-left: -100%; /* left排在了center后面，需要向左移动center的宽度*/ position: relative; left: -100px; /* 利用相对定位，使left回到预想位置 */ } .">
+
+
+<meta itemprop="datePublished" content="2019-03-17T10:09:15&#43;11:00" />
+<meta itemprop="dateModified" content="2019-03-17T10:09:15&#43;11:00" />
+<meta itemprop="wordCount" content="494">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS Layout"/>
+<meta name="twitter:description" content="圣杯模型 圣杯模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染；在实际应用中，希望左右两边的高度，随中间的高度，自适应。
+ 通过类选择器，分别对center、left、right设置基础样式;其中left和right宽度固定，center宽度自适应（100%);
+ 让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷；
+ 此时，left排在了center后面，right排在了left后面；
+ 通过margin属性，将right向左移动left的宽度；
+ 此时，left和right压盖住了center，需要通过父级元素（padding-left，padding-right）预留出left和right的空间；
+ 再利用相对定位，使left和right回到预想位置；
+  html文件
+&lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;center&quot;&gt;center &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;p&gt;test height auto&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; &lt;/div&gt;  css文件
+.body{ min-width: 630px; } .container{ overflow: hidden; /* 清除浮动 */ padding-left: 100px; /* 为left留出空间 */ padding-right: 200px; /* 为right留出空间 */ } .center{ width: 100%; background-color: #fff144a6; } .left{ width: 100px; background-color: #33ff857a; margin-left: -100%; /* left排在了center后面，需要向左移动center的宽度*/ position: relative; left: -100px; /* 利用相对定位，使left回到预想位置 */ } ."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://localhost:1313/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Limei&#39;s Blog
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">CSS Layout</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-03-17T10:09:15&#43;11:00">March 17, 2019</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h3 id="圣杯模型">圣杯模型</h3>
+
+<p>圣杯模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染；在实际应用中，希望左右两边的高度，随中间的高度，自适应。</p>
+
+<ol>
+<li><p>通过类选择器，分别对center、left、right设置基础样式;其中left和right宽度固定，center宽度自适应（100%);</p></li>
+
+<li><p>让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷；</p></li>
+
+<li><p>此时，left排在了center后面，right排在了left后面；</p></li>
+
+<li><p>通过margin属性，将right向左移动left的宽度；</p></li>
+
+<li><p>此时，left和right压盖住了center，需要通过父级元素（padding-left，padding-right）预留出left和right的空间；</p></li>
+
+<li><p>再利用相对定位，使left和right回到预想位置；</p></li>
+</ol>
+
+<p>html文件</p>
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;center&quot;&gt;center
+        &lt;p&gt;test height auto&lt;/p&gt;
+        &lt;p&gt;test height auto&lt;/p&gt;
+        &lt;p&gt;test height auto&lt;/p&gt;
+        &lt;p&gt;test height auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>css文件</p>
+
+<pre><code>.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden;  /* 清除浮动 */
+    padding-left: 100px;  /* 为left留出空间 */
+    padding-right: 200px;  /* 为right留出空间 */
+}
+.center{
+    width: 100%;
+    background-color: #fff144a6;
+}
+.left{
+    width: 100px;
+    background-color: #33ff857a;
+    margin-left: -100%; /* left排在了center后面，需要向左移动center的宽度*/
+    position: relative;
+    left: -100px; /* 利用相对定位，使left回到预想位置 */
+}
+.right{
+    width: 200px;
+    background-color: #ef348a57;
+    margin-left: -200px;/* right排在了left后面，需要向左移动left的宽度*/
+    position: relative;
+    right: -200px;  /* 利用相对定位，使right到预想位置 */
+}
+.center, .left, .right{
+    float: left;
+    /* center、left、right分别增加了padding;
+      margin-bottom的负值，又回退了padding增加的值;
+      又由于容器元素overflow: hidden，将多余的部分剪裁掉，于是高度自适应了 */
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+</code></pre>
+
+<h3 id="双飞翼模型">双飞翼模型</h3>
+
+<p>双飞翼模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染。在实际应用中，希望左右两边的高度，随中间的高度，自适应。</p>
+
+<ol>
+<li>通过类选择器，分别对center-container、left、right设置基础样式，其中left和right宽度固定，center宽度自适应（100%）;</li>
+
+<li><p>让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷;</p></li>
+
+<li><p>此时，left排在了center后面，right排在了left后面;</p></li>
+
+<li><p>通过margin属性，将left向左移动center的宽度,right向左移动left的宽度;</p></li>
+
+<li><p>此时，left和right压盖住了center，需要通过center（margin-left，margin-right）预留出left和right的空间;</p></li>
+</ol>
+
+<p>html文件</p>
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;center-container&quot;&gt;
+        &lt;div class=&quot;center&quot;&gt;center
+            &lt;p&gt;test height auto&lt;/p&gt;
+            &lt;p&gt;test height auto&lt;/p&gt;
+            &lt;p&gt;test height auto&lt;/p&gt;
+            &lt;p&gt;test height auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>css文件</p>
+
+<pre><code>.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden;/* 清除浮动 */
+}
+.center-container{
+    width: 100%;
+    float: left;
+}
+.center{
+    background-color: #fff144a6;
+    margin-left: 100px;
+    margin-right: 200px;
+}
+.left{
+    width: 100px;
+    background-color: #33ff857a;
+    float: left;
+    margin-left: -100%;/* left排在了center后面，需要向左移动center的宽度*/
+}
+.right{
+    width: 200px;
+    background-color: #ef348a57;
+    float: left;
+    margin-left: -200px;/* right排在了left后面，需要向左移动left的宽度*/
+}
+.center, .left, .right{
+    /* center、left、right分别增加了padding;
+      margin-bottom的负值，又回退了padding增加的值;
+      又由于容器元素overflow: hidden，将多余的部分剪裁掉，于是高度自适应了 */
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+</code></pre>
+
+<h3 id="两栏模型-一">两栏模型(一)</h3>
+
+<p>左边固定宽度，右边自适应的两栏布局。</p>
+
+<ul>
+<li>左侧浮动，右侧形成BFC，通过“overflow: auto”实现。</li>
+</ul>
+
+<p>html文件</p>
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;nav class=&quot;nav&quot;&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;section class=&quot;section&quot;&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>css文件</p>
+
+<pre><code>.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden; /* 清除浮动 */
+}
+.nav{
+    width: 200px;
+    background-color: #33ff857a;
+    float: left;
+}
+.section{
+    background-color: #ef348a57;
+    overflow: auto;
+}
+.nav, .section{
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+</code></pre>
+
+<h3 id="两栏模型-二">两栏模型(二)</h3>
+
+<p>左边固定宽度，右边自适应的两栏布局。</p>
+
+<ul>
+<li>左侧浮动，右侧宽度自适应，右侧margin让出左侧宽度。</li>
+</ul>
+
+<p>html文件</p>
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;nav class=&quot;nav&quot;&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;section class=&quot;section&quot;&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>css文件</p>
+
+<pre><code>.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden; /* 清除浮动 */
+}
+.nav{
+    width: 200px;
+    background-color: #33ff857a;
+    float: left;
+}
+.section{
+    background-color: #ef348a57;
+    width: 100%; 
+    margin-left: 200px;
+}
+.nav, .section{
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+</code></pre>
+
+<h3 id="两栏模型-三">两栏模型(三)</h3>
+
+<p>左边固定宽度，右边自适应的两栏布局。</p>
+
+<ul>
+<li>父元素相对位置，左侧绝对位置，右侧宽度自适应，右侧margin让出左侧宽度。</li>
+</ul>
+
+<p>html文件</p>
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;nav class=&quot;nav&quot;&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;section class=&quot;section&quot;&gt;
+        &lt;div&gt;test1&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>css文件</p>
+
+<pre><code>.body{
+    min-width: 630px;
+}
+.container{
+    position: relative;
+}
+.nav{
+    width: 200px;
+    background-color: #33ff857a;
+    position: absolute;
+}
+.section{
+    background-color: #ef348a57;
+    margin-left: 200px;
+}
+</code></pre>
+
+<h3 id="水平居中">水平居中</h3>
+
+<p>水平居中的三种方式。</p>
+
+<ol>
+<li><p>margin: auto；</p></li>
+
+<li><p>元素盒模型变为行内块，父元素使用text-align: center；</p></li>
+
+<li><p>定位，元素绝对定位，向右偏移50%，再反向移动元素宽度的一半；</p></li>
+</ol>
+
+<p>html文件</p>
+
+<pre><code>&lt;div class=&quot;center1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;center2-father&quot;&gt;
+    &lt;div class=&quot;center2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;center3-father&quot;&gt;
+    &lt;div class=&quot;center3&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>css文件</p>
+
+<pre><code>.body{
+    min-width: 630px;
+}
+.center1{
+    width: 100px;
+    height: 100px;
+    background-color: #33ff857a;
+    margin: auto;
+}
+
+.center2-father{
+    text-align: center;
+}
+.center2{
+    width: 100px;
+    height: 100px;
+    background-color: #fff144a6;
+    display: inline-table;
+}
+
+.center3-father{
+    position: relative;
+}
+.center3{
+    width: 100px;
+    height: 100px;
+    background-color: #ef348a57;
+    position: absolute;
+    left: 50%; /* 先向右偏移容器的一半 */
+    margin-left: -50px;  /* 再反向移动元素宽度的一半 */
+}
+</code></pre>
+
+<h3 id="垂直居中">垂直居中</h3>
+
+<p>垂直居中的三种方式。</p>
+
+<ol>
+<li><p>line-height与height相等；</p></li>
+
+<li><p>父元素为table，子元素为table-cell，vertical-align: middle；</p></li>
+
+<li><p>定位，元素绝对定位，向下偏移50%，再反向移动元素高度的一半；</p></li>
+</ol>
+
+<p>html文件</p>
+
+<pre><code>&lt;div class=&quot;center1-father&quot;&gt;
+    &lt;div class=&quot;center1&quot;&gt;center1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;center2-father&quot;&gt;
+    &lt;div class=&quot;center2&quot;&gt;center2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;center3-father&quot;&gt;
+    &lt;div class=&quot;center3&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>css文件</p>
+
+<pre><code>.body{
+    min-width: 630px;
+}
+.center1-father{
+    width: 100px;
+    height: 100px;
+    background-color: #33ff857a;
+    line-height: 100px;
+}
+
+.center2-father{
+    display: table;
+    margin-bottom: 50px;
+}
+.center2{
+    width: 100px;
+    height: 100px;
+    background-color: #fff144a6;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.center3-father{
+    position: relative;
+}
+.center3{
+    width: 100px;
+    height: 100px;
+    background-color: #ef348a57;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy; 2019 Limei&#39;s Blog
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>
