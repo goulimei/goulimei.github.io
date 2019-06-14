@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Limei Gou">
+  
+  
+  
+  <link rel="prev" href="https://example.com/2019/git-install-offline/" />
+  
+  <link rel="canonical" href="https://example.com/2019/russian-box/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Russian Box | LeaveIt
+       
+  </title>
+  <meta name="title" content="Russian Box | LeaveIt">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://example.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Russian Box",
+    "headline" : "Russian Box",
+    "description" : " 介绍  向左键、向右键，控制左右； 向上键，控制旋转；向下键，控制加速；空格键，暂停；Enter键，继续。 初始化30X30的游戏主界面，和7种图形数据结构； localStorage存储最高分数； 没有实现webSocket，暂时不能联机对战；  实现过程  设计整体结构； 定义样式，字体大小和颜色等； 游戏主界面canvas组件，由js动态生成； 绘制游戏底图画布canvas; 创建路径，利用for循环，绘制横向网格和纵向网格，关闭路径。根据设置的线宽和颜色，进行绘制。 定义7种模块的数据类型; 利用二维数组存储数据模型，每种模块由4个小方块构成，用参数x,y,color，表示每个方块的位置。 将所有二维网格都设定为0，表示小方块为默认底图画布。 初始化模块，随机得到7种模块的一种。 实现向左、向右、向下移动和旋转的逻辑; 向左向右，考虑边界值，更改小方块数值，表示网格被上色； 向下，考虑是否到底或碰到已有方块，停止移动。若到顶，用localStorage存储当前分数，并更新最大分数； 旋转，按90度逆时针转动。 结果发布界面，通过localStorage获取本地存储中的当前速度，当前分数、最大分数。 增加键盘监听，上下左右键，空格键，回车键。  ",
+    "inLanguage" : "en-us",
+    "author" : "Limei Gou",
+    "creator" : "Limei Gou",
+    "publisher": "Limei Gou",
+    "accountablePerson" : "Limei Gou",
+    "copyrightHolder" : "Limei Gou",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-03-17 10:32:05 &#43;1100 &#43;1100",
+    "dateModified" : "2019-03-17 10:32:05 &#43;1100 &#43;1100",
+    "url" : "https://example.com/2019/russian-box/",
+    "wordCount" : "22",
+    "keywords" : [  "LeaveIt"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Russian Box</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://example.com" rel="author">Limei Gou</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-03-17 itemprop="datePublished">March 17, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h3 id="介绍">介绍</h3>
+
+<ol>
+<li>向左键、向右键，控制左右；</li>
+<li>向上键，控制旋转；向下键，控制加速；空格键，暂停；Enter键，继续。</li>
+<li>初始化30X30的游戏主界面，和7种图形数据结构；
+localStorage存储最高分数；</li>
+<li>没有实现webSocket，暂时不能联机对战；</li>
+</ol>
+
+<h3 id="实现过程">实现过程</h3>
+
+<ol>
+<li>设计整体结构；</li>
+<li>定义样式，字体大小和颜色等；</li>
+<li>游戏主界面canvas组件，由js动态生成；</li>
+<li>绘制游戏底图画布canvas;</li>
+<li>创建路径，利用for循环，绘制横向网格和纵向网格，关闭路径。根据设置的线宽和颜色，进行绘制。</li>
+<li>定义7种模块的数据类型;</li>
+<li>利用二维数组存储数据模型，每种模块由4个小方块构成，用参数x,y,color，表示每个方块的位置。</li>
+<li>将所有二维网格都设定为0，表示小方块为默认底图画布。</li>
+<li>初始化模块，随机得到7种模块的一种。</li>
+<li>实现向左、向右、向下移动和旋转的逻辑;</li>
+<li>向左向右，考虑边界值，更改小方块数值，表示网格被上色；</li>
+<li>向下，考虑是否到底或碰到已有方块，停止移动。若到顶，用localStorage存储当前分数，并更新最大分数；</li>
+<li>旋转，按90度逆时针转动。</li>
+<li>结果发布界面，通过localStorage获取本地存储中的当前速度，当前分数、最大分数。</li>
+<li>增加键盘监听，上下左右键，空格键，回车键。</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Limei Gou </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://example.com/2019/russian-box/>https://example.com/2019/russian-box/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://example.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/2019/git-install-offline/" class="prev" rel="prev" title="Git Install Offline"><i class="iconfont icon-left"></i>&nbsp;Git Install Offline</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2011 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://example.com">Limei Gou</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

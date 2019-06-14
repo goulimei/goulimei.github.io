@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Limei Gou">
+  
+  
+  
+  
+  <link rel="next" href="https://example.com/2019/css-layout/" />
+  <link rel="canonical" href="https://example.com/2019/how-to-understand-package-json/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           How to Understand Package JSON | LeaveIt
+       
+  </title>
+  <meta name="title" content="How to Understand Package JSON | LeaveIt">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://example.com"
+    },
+    "articleSection" : "posts",
+    "name" : "How to Understand Package JSON",
+    "headline" : "How to Understand Package JSON",
+    "description" : "package.json文件 对于自定义模块，需要package.json文件，用于描述模块。
+好处 1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载； 2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况； 3. 方便通过 npm publish 发布到NPM库，供别人下载使用。  生成package.json文件 ** npm init **
+This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &lt;pkg&gt;` afterwards to install a package and save it as a dependency in the package.",
+    "inLanguage" : "en-us",
+    "author" : "Limei Gou",
+    "creator" : "Limei Gou",
+    "publisher": "Limei Gou",
+    "accountablePerson" : "Limei Gou",
+    "copyrightHolder" : "Limei Gou",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-03-17 10:06:45 &#43;1100 &#43;1100",
+    "dateModified" : "2019-03-17 10:06:45 &#43;1100 &#43;1100",
+    "url" : "https://example.com/2019/how-to-understand-package-json/",
+    "wordCount" : "275",
+    "keywords" : [  "LeaveIt"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">How to Understand Package JSON</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://example.com" rel="author">Limei Gou</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-03-17 itemprop="datePublished">March 17, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h3 id="package-json文件">package.json文件</h3>
+
+<p>对于自定义模块，需要package.json文件，用于描述模块。</p>
+
+<h3 id="好处">好处</h3>
+
+<pre><code>1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载；
+2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况；
+3. 方便通过 npm publish 发布到NPM库，供别人下载使用。
+</code></pre>
+
+<h3 id="生成package-json文件">生成package.json文件</h3>
+
+<p>** npm init **</p>
+
+<pre><code>This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (react-test) react-test  ### 项目名称，必要字段  ###
+version: (1.0.0)                       ### 项目版本号，必要字段  ### 
+description: this is a react test      ### 项目描述   ### 
+entry point: (index.js)                ### 入口文件   ### 
+test command:                          ### 项目启动时的脚本命令  ### 
+git repository:                        ### 如果有git地址，可以将这个项目放到GIT仓库里  ### 
+keywords: react,key                    ### 关键词   ### 
+author: limeigou                       ### 作者    ### 
+license: (ISC)                         ### 发布时需要的证书   ### 
+
+About to write to /Users/gou/Desktop/gou/react-test/package.json:  ###  生成的package.json预览  ###
+
+{
+&quot;name&quot;: &quot;react-test&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;this is a react test&quot;,
+&quot;main&quot;: &quot;index.js&quot;,
+&quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+},
+&quot;keywords&quot;: [
+    &quot;react&quot;,
+    &quot;key&quot;
+],
+&quot;author&quot;: &quot;limeigou&quot;,
+&quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes) yes    ###   若符合预期，输入yes  ###
+</code></pre>
+
+<h3 id="属性说明">属性说明</h3>
+
+<pre><code>{
+&quot;name&quot;: &quot;react-test&quot;,                     ### 项目名称，必要字段  ###
+&quot;version&quot;: &quot;1.0.0&quot;,                       ### 项目版本号，必要字段  ###
+&quot;description&quot;: &quot;this is a react test&quot;,    ### 项目描述,可无   ###
+&quot;main&quot;: &quot;index.js&quot;,                       ### 模块的入口，知该载入哪个文件   ###
+&quot;scripts&quot;: {                              ### 项目启动时的脚本命令，npm run dev, npm run build  ### 
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;，
+    &quot;build&quot;: &quot;webpack&quot;,
+    &quot;dev&quot;: &quot;webpack-dev-server --hot&quot;
+},
+&quot;keywords&quot;: [                             ### 关键词,可无  ### 
+    &quot;react&quot;,
+    &quot;key&quot;
+],
+&quot;author&quot;: &quot;limeigou&quot;,                     ### 作者,可无   ###
+&quot;license&quot;: &quot;ISC&quot;，                        ### 发布时需要的证书   ###
+&quot;devDependencies&quot;: {                      ### 生产环境下，依赖的模块   ###
+    &quot;webpack&quot;: &quot;^4.29.5&quot;,
+    &quot;webpack-dev-server&quot;: &quot;^3.1.14&quot;
+}，
+&quot;dependencies&quot;: {                        ### 开发环境下，依赖的模块   ###
+    &quot;react&quot;: &quot;^15.6.2&quot;,
+    &quot;react-dom&quot;: &quot;^15.6.2&quot;
+}
+}
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Limei Gou </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://example.com/2019/how-to-understand-package-json/>https://example.com/2019/how-to-understand-package-json/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://example.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://example.com/2019/css-layout/" class="next" rel="next" title="CSS Layout">CSS Layout&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2011 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://example.com">Limei Gou</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

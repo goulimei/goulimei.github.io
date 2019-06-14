@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Limei&#39;s Blog</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Limei&#39;s Blog</description>
+    <title>Posts on LeaveIt</title>
+    <link>https://example.com/posts/</link>
+    <description>Recent content in Posts on LeaveIt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Mar 2019 10:32:05 +1100</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Russian Box</title>
-      <link>http://localhost:1313/posts/russian-box/</link>
+      <link>https://example.com/2019/russian-box/</link>
       <pubDate>Sun, 17 Mar 2019 10:32:05 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/russian-box/</guid>
+      <guid>https://example.com/2019/russian-box/</guid>
       <description> 介绍  向左键、向右键，控制左右； 向上键，控制旋转；向下键，控制加速；空格键，暂停；Enter键，继续。 初始化30X30的游戏主界面，和7种图形数据结构； localStorage存储最高分数； 没有实现webSocket，暂时不能联机对战；  实现过程  设计整体结构； 定义样式，字体大小和颜色等； 游戏主界面canvas组件，由js动态生成； 绘制游戏底图画布canvas; 创建路径，利用for循环，绘制横向网格和纵向网格，关闭路径。根据设置的线宽和颜色，进行绘制。 定义7种模块的数据类型; 利用二维数组存储数据模型，每种模块由4个小方块构成，用参数x,y,color，表示每个方块的位置。 将所有二维网格都设定为0，表示小方块为默认底图画布。 初始化模块，随机得到7种模块的一种。 实现向左、向右、向下移动和旋转的逻辑; 向左向右，考虑边界值，更改小方块数值，表示网格被上色； 向下，考虑是否到底或碰到已有方块，停止移动。若到顶，用localStorage存储当前分数，并更新最大分数； 旋转，按90度逆时针转动。 结果发布界面，通过localStorage获取本地存储中的当前速度，当前分数、最大分数。 增加键盘监听，上下左右键，空格键，回车键。  </description>
     </item>
     
     <item>
-      <title>Git Install Noweb</title>
-      <link>http://localhost:1313/posts/git-install-offline/</link>
+      <title>Git Install Offline</title>
+      <link>https://example.com/2019/git-install-offline/</link>
       <pubDate>Sun, 17 Mar 2019 10:26:19 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/git-install-offline/</guid>
+      <guid>https://example.com/2019/git-install-offline/</guid>
       <description>无网络环境下，git源码文件安装 说明
 本文针对linux的Redhat系列(FedoraCore,RHEL,CentOS),ubuntu采用apt-get,这里略过。
 目前已测试过：
@@ -36,10 +36,10 @@
     
     <item>
       <title>CSS Layout</title>
-      <link>http://localhost:1313/posts/css-layout/</link>
+      <link>https://example.com/2019/css-layout/</link>
       <pubDate>Sun, 17 Mar 2019 10:09:15 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/css-layout/</guid>
+      <guid>https://example.com/2019/css-layout/</guid>
       <description>圣杯模型 圣杯模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染；在实际应用中，希望左右两边的高度，随中间的高度，自适应。
  通过类选择器，分别对center、left、right设置基础样式;其中left和right宽度固定，center宽度自适应（100%);
  让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷；
@@ -54,10 +54,10 @@
     
     <item>
       <title>How to Understand Package JSON</title>
-      <link>http://localhost:1313/posts/how-to-understand-package-json/</link>
+      <link>https://example.com/2019/how-to-understand-package-json/</link>
       <pubDate>Sun, 17 Mar 2019 10:06:45 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/how-to-understand-package-json/</guid>
+      <guid>https://example.com/2019/how-to-understand-package-json/</guid>
       <description>package.json文件 对于自定义模块，需要package.json文件，用于描述模块。
 好处 1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载； 2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况； 3. 方便通过 npm publish 发布到NPM库，供别人下载使用。  生成package.json文件 ** npm init **
 This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &amp;lt;pkg&amp;gt;` afterwards to install a package and save it as a dependency in the package.</description>

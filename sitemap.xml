@@ -2,46 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <url>
-    <loc>http://localhost:1313/posts/russian-box/</loc>
-    <lastmod>2019-03-17T10:32:05+11:00</lastmod>
-  </url>
+    <url>
+      <loc>https://example.com/2019/russian-box/</loc>
+      
+      <lastmod>2019-03-17T10:32:05+11:00</lastmod>
+      
+      
+      
+      
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/posts/git-install-offline/</loc>
-    <lastmod>2019-03-17T10:26:19+11:00</lastmod>
-  </url>
+    <url>
+      <loc>https://example.com/2019/git-install-offline/</loc>
+      
+      <lastmod>2019-03-17T10:26:19+11:00</lastmod>
+      
+      
+      
+      
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/posts/css-layout/</loc>
-    <lastmod>2019-03-17T10:09:15+11:00</lastmod>
-  </url>
+    <url>
+      <loc>https://example.com/2019/css-layout/</loc>
+      
+      <lastmod>2019-03-17T10:09:15+11:00</lastmod>
+      
+      
+      
+      
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/posts/how-to-understand-package-json/</loc>
-    <lastmod>2019-03-17T10:06:45+11:00</lastmod>
-  </url>
+    <url>
+      <loc>https://example.com/2019/how-to-understand-package-json/</loc>
+      
+      <lastmod>2019-03-17T10:06:45+11:00</lastmod>
+      
+      
+      
+      
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <priority>0</priority>
-  </url>
+    <url>
+      <loc>https://example.com/categories/</loc>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2019-03-17T10:32:05+11:00</lastmod>
-    <priority>0</priority>
-  </url>
+    <url>
+      <loc>https://example.com/</loc>
+      
+      <lastmod>2019-03-17T10:32:05+11:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2019-03-17T10:32:05+11:00</lastmod>
-    <priority>0</priority>
-  </url>
+    <url>
+      <loc>https://example.com/posts/</loc>
+      
+      <lastmod>2019-03-17T10:32:05+11:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <priority>0</priority>
-  </url>
+    <url>
+      <loc>https://example.com/tags/</loc>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
   
 </urlset>

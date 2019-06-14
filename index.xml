@@ -1,66 +1,671 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Limei&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Limei&#39;s Blog</description>
+    <title>LeaveIt on LeaveIt</title>
+    <link>https://example.com/</link>
+    <description>Recent content in LeaveIt on LeaveIt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Mar 2019 10:32:05 +1100</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Russian Box</title>
-      <link>http://localhost:1313/posts/russian-box/</link>
+      <link>https://example.com/2019/russian-box/</link>
       <pubDate>Sun, 17 Mar 2019 10:32:05 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/russian-box/</guid>
-      <description> 介绍  向左键、向右键，控制左右； 向上键，控制旋转；向下键，控制加速；空格键，暂停；Enter键，继续。 初始化30X30的游戏主界面，和7种图形数据结构； localStorage存储最高分数； 没有实现webSocket，暂时不能联机对战；  实现过程  设计整体结构； 定义样式，字体大小和颜色等； 游戏主界面canvas组件，由js动态生成； 绘制游戏底图画布canvas; 创建路径，利用for循环，绘制横向网格和纵向网格，关闭路径。根据设置的线宽和颜色，进行绘制。 定义7种模块的数据类型; 利用二维数组存储数据模型，每种模块由4个小方块构成，用参数x,y,color，表示每个方块的位置。 将所有二维网格都设定为0，表示小方块为默认底图画布。 初始化模块，随机得到7种模块的一种。 实现向左、向右、向下移动和旋转的逻辑; 向左向右，考虑边界值，更改小方块数值，表示网格被上色； 向下，考虑是否到底或碰到已有方块，停止移动。若到顶，用localStorage存储当前分数，并更新最大分数； 旋转，按90度逆时针转动。 结果发布界面，通过localStorage获取本地存储中的当前速度，当前分数、最大分数。 增加键盘监听，上下左右键，空格键，回车键。  </description>
+      <guid>https://example.com/2019/russian-box/</guid>
+      <description>
+
+&lt;h3 id=&#34;介绍&#34;&gt;介绍&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;向左键、向右键，控制左右；&lt;/li&gt;
+&lt;li&gt;向上键，控制旋转；向下键，控制加速；空格键，暂停；Enter键，继续。&lt;/li&gt;
+&lt;li&gt;初始化30X30的游戏主界面，和7种图形数据结构；
+localStorage存储最高分数；&lt;/li&gt;
+&lt;li&gt;没有实现webSocket，暂时不能联机对战；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;实现过程&#34;&gt;实现过程&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;设计整体结构；&lt;/li&gt;
+&lt;li&gt;定义样式，字体大小和颜色等；&lt;/li&gt;
+&lt;li&gt;游戏主界面canvas组件，由js动态生成；&lt;/li&gt;
+&lt;li&gt;绘制游戏底图画布canvas;&lt;/li&gt;
+&lt;li&gt;创建路径，利用for循环，绘制横向网格和纵向网格，关闭路径。根据设置的线宽和颜色，进行绘制。&lt;/li&gt;
+&lt;li&gt;定义7种模块的数据类型;&lt;/li&gt;
+&lt;li&gt;利用二维数组存储数据模型，每种模块由4个小方块构成，用参数x,y,color，表示每个方块的位置。&lt;/li&gt;
+&lt;li&gt;将所有二维网格都设定为0，表示小方块为默认底图画布。&lt;/li&gt;
+&lt;li&gt;初始化模块，随机得到7种模块的一种。&lt;/li&gt;
+&lt;li&gt;实现向左、向右、向下移动和旋转的逻辑;&lt;/li&gt;
+&lt;li&gt;向左向右，考虑边界值，更改小方块数值，表示网格被上色；&lt;/li&gt;
+&lt;li&gt;向下，考虑是否到底或碰到已有方块，停止移动。若到顶，用localStorage存储当前分数，并更新最大分数；&lt;/li&gt;
+&lt;li&gt;旋转，按90度逆时针转动。&lt;/li&gt;
+&lt;li&gt;结果发布界面，通过localStorage获取本地存储中的当前速度，当前分数、最大分数。&lt;/li&gt;
+&lt;li&gt;增加键盘监听，上下左右键，空格键，回车键。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
-      <title>Git Install Noweb</title>
-      <link>http://localhost:1313/posts/git-install-offline/</link>
+      <title>Git Install Offline</title>
+      <link>https://example.com/2019/git-install-offline/</link>
       <pubDate>Sun, 17 Mar 2019 10:26:19 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/git-install-offline/</guid>
-      <description>无网络环境下，git源码文件安装 说明
-本文针对linux的Redhat系列(FedoraCore,RHEL,CentOS),ubuntu采用apt-get,这里略过。
-目前已测试过：
- centos7(kernel-release:3.10.0-229.el7.x86_64);
- 中标麒麟3.2(kernel-release：2.6.32-220.7.1.1.ky3.2.x86_64);
- 其中centos7自带git版本为:git version 1.8.3.1  1.解压缩git源码文件 tar -xzvf cd git-2.16.2.tar.gz cd git-2.16.2  2.编译git源文件 #### 由于git依赖的库很多,可以先碰运气,安装试试 #### make configure ./configure --prefix=/usr #### 编译所有 #### make all doc #### 若无错误,恭喜你,直接进入步骤3 #### #### 但90%都会报错,例如下面的示例 #### #### sample #### ASCIIDOC git-log.html /bin/sh:行1: asciidoc: 未找到命令 make[1]: *** [git-log.html] 错误 127 make[1]: 离开目录“/home/gis/git-2.16.2/Documentation” make: *** [doc] 错误 2 #### 此时请跳到步骤4,(缺哪个第三方库，编译和安装哪个) #### #### 完成后,再返回步骤2 ####  3.安装git su make install install-doc install-man install-html #### 验证git安装成功 #### git --version git version 2.</description>
+      <guid>https://example.com/2019/git-install-offline/</guid>
+      <description>
+
+&lt;h3 id=&#34;无网络环境下-git源码文件安装&#34;&gt;无网络环境下，git源码文件安装&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;本文针对linux的Redhat系列(FedoraCore,RHEL,CentOS),ubuntu采用apt-get,这里略过。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;目前已测试过：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;centos7(kernel-release:3.10.0-229.el7.x86_64);&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;中标麒麟3.2(kernel-release：2.6.32-220.7.1.1.ky3.2.x86_64);&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;其中centos7自带git版本为:git version 1.8.3.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;1-解压缩git源码文件&#34;&gt;1.解压缩git源码文件&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzvf cd git-2.16.2.tar.gz 
+cd git-2.16.2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-编译git源文件&#34;&gt;2.编译git源文件&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;####  由于git依赖的库很多,可以先碰运气,安装试试  #### 
+make configure
+./configure --prefix=/usr
+
+####  编译所有  ####
+make all doc
+
+####  若无错误,恭喜你,直接进入步骤3  ####
+####  但90%都会报错,例如下面的示例  #### 
+####  sample ####
+ASCIIDOC git-log.html
+/bin/sh:行1: asciidoc: 未找到命令
+make[1]: *** [git-log.html] 错误 127
+make[1]: 离开目录“/home/gis/git-2.16.2/Documentation”
+make: *** [doc] 错误 2
+
+####  此时请跳到步骤4,(缺哪个第三方库，编译和安装哪个)  ####
+####  完成后,再返回步骤2  ####
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-安装git&#34;&gt;3.安装git&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;su
+make install install-doc install-man install-html
+####  验证git安装成功  ####
+git --version
+git version 2.16.2   // git安装成功
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-编译-安装git依赖的第三方库-需要时&#34;&gt;4.编译、安装git依赖的第三方库(需要时)&lt;/h4&gt;
+
+&lt;h5 id=&#34;4-1-安装asciidoc&#34;&gt;4.1 安装asciidoc&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzvf asciidoc-8.6.9.tar.gz
+cd asciidoc-8.6.9
+./configure --prefix=/usr
+su
+make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;!https://pan.baidu.com/s/1E0fki6RHq-HUOpuHUoG3iA&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;下载asciidoc&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;4-2-安装xmlto&#34;&gt;4.2 安装xmlto&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzvf xmlto-0.0.28.tar.gz
+cd xmlto-0.0.28
+./configure --prefix=/usr
+su
+make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;!https://pan.baidu.com/s/1tKxLWOWd8UBf8cGU2QjdLQ&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;下载xmlto-0.0.28&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;4-3-安装zlib&#34;&gt;4.3 安装zlib&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzvf zlib-1.2.8.tar.gz
+cd zlib-1.2.8
+./configure --prefix=/usr
+su
+make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;!https://pan.baidu.com/s/1tOzcfjoCiN54-XQIXhBU2A&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;下载zlib-1.2.8&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;4-4-安装perl&#34;&gt;4.4 安装perl&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzvf perl-5.22.1.tar.gz
+cd perl-5.22.1
+./configure.gnu --prefix=/usr
+su      
+make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;!https://pan.baidu.com/s/1uhzzowaFdOKt5AywzRlaIA&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;下载zlib-1.2.8&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;4-5-安装openssl&#34;&gt;4.5 安装openssl&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzvf openssl-1.0.2.tar.gz
+cd openssl-1.0.2
+./configure --prefix=/usr
+su
+make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;!https://pan.baidu.com/s/1JYTkjiUxO0awSFbtSA6kWQ&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;下载zlib-1.2.8&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>CSS Layout</title>
-      <link>http://localhost:1313/posts/css-layout/</link>
+      <link>https://example.com/2019/css-layout/</link>
       <pubDate>Sun, 17 Mar 2019 10:09:15 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/css-layout/</guid>
-      <description>圣杯模型 圣杯模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染；在实际应用中，希望左右两边的高度，随中间的高度，自适应。
- 通过类选择器，分别对center、left、right设置基础样式;其中left和right宽度固定，center宽度自适应（100%);
- 让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷；
- 此时，left排在了center后面，right排在了left后面；
- 通过margin属性，将right向左移动left的宽度；
- 此时，left和right压盖住了center，需要通过父级元素（padding-left，padding-right）预留出left和right的空间；
- 再利用相对定位，使left和right回到预想位置；
-  html文件
-&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;center &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;left&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;right&amp;quot;&amp;gt;right&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  css文件
-.body{ min-width: 630px; } .container{ overflow: hidden; /* 清除浮动 */ padding-left: 100px; /* 为left留出空间 */ padding-right: 200px; /* 为right留出空间 */ } .center{ width: 100%; background-color: #fff144a6; } .left{ width: 100px; background-color: #33ff857a; margin-left: -100%; /* left排在了center后面，需要向左移动center的宽度*/ position: relative; left: -100px; /* 利用相对定位，使left回到预想位置 */ } .</description>
+      <guid>https://example.com/2019/css-layout/</guid>
+      <description>
+
+&lt;h3 id=&#34;圣杯模型&#34;&gt;圣杯模型&lt;/h3&gt;
+
+&lt;p&gt;圣杯模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染；在实际应用中，希望左右两边的高度，随中间的高度，自适应。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;通过类选择器，分别对center、left、right设置基础样式;其中left和right宽度固定，center宽度自适应（100%);&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;此时，left排在了center后面，right排在了left后面；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;通过margin属性，将right向左移动left的宽度；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;此时，left和right压盖住了center，需要通过父级元素（padding-left，padding-right）预留出left和right的空间；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;再利用相对定位，使left和right回到预想位置；&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;html文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;center
+        &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;left&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;right&amp;quot;&amp;gt;right&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;css文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden;  /* 清除浮动 */
+    padding-left: 100px;  /* 为left留出空间 */
+    padding-right: 200px;  /* 为right留出空间 */
+}
+.center{
+    width: 100%;
+    background-color: #fff144a6;
+}
+.left{
+    width: 100px;
+    background-color: #33ff857a;
+    margin-left: -100%; /* left排在了center后面，需要向左移动center的宽度*/
+    position: relative;
+    left: -100px; /* 利用相对定位，使left回到预想位置 */
+}
+.right{
+    width: 200px;
+    background-color: #ef348a57;
+    margin-left: -200px;/* right排在了left后面，需要向左移动left的宽度*/
+    position: relative;
+    right: -200px;  /* 利用相对定位，使right到预想位置 */
+}
+.center, .left, .right{
+    float: left;
+    /* center、left、right分别增加了padding;
+      margin-bottom的负值，又回退了padding增加的值;
+      又由于容器元素overflow: hidden，将多余的部分剪裁掉，于是高度自适应了 */
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;双飞翼模型&#34;&gt;双飞翼模型&lt;/h3&gt;
+
+&lt;p&gt;双飞翼模型属于三栏布局，其中左右两列宽度固定，中间宽度自适应且优先展示渲染。在实际应用中，希望左右两边的高度，随中间的高度，自适应。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;通过类选择器，分别对center-container、left、right设置基础样式，其中left和right宽度固定，center宽度自适应（100%）;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;让三个块元素都向左浮动，并利用父容器清除浮动，即通过overflow:hidden,创建BFC防止高度塌陷;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;此时，left排在了center后面，right排在了left后面;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;通过margin属性，将left向左移动center的宽度,right向左移动left的宽度;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;此时，left和right压盖住了center，需要通过center（margin-left，margin-right）预留出left和right的空间;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;html文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;center-container&amp;quot;&amp;gt;
+        &amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;center
+            &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;test height auto&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;left&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;right&amp;quot;&amp;gt;right&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;css文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden;/* 清除浮动 */
+}
+.center-container{
+    width: 100%;
+    float: left;
+}
+.center{
+    background-color: #fff144a6;
+    margin-left: 100px;
+    margin-right: 200px;
+}
+.left{
+    width: 100px;
+    background-color: #33ff857a;
+    float: left;
+    margin-left: -100%;/* left排在了center后面，需要向左移动center的宽度*/
+}
+.right{
+    width: 200px;
+    background-color: #ef348a57;
+    float: left;
+    margin-left: -200px;/* right排在了left后面，需要向左移动left的宽度*/
+}
+.center, .left, .right{
+    /* center、left、right分别增加了padding;
+      margin-bottom的负值，又回退了padding增加的值;
+      又由于容器元素overflow: hidden，将多余的部分剪裁掉，于是高度自适应了 */
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;两栏模型-一&#34;&gt;两栏模型(一)&lt;/h3&gt;
+
+&lt;p&gt;左边固定宽度，右边自适应的两栏布局。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;左侧浮动，右侧形成BFC，通过“overflow: auto”实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;html文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;nav class=&amp;quot;nav&amp;quot;&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+    &amp;lt;/nav&amp;gt;
+    &amp;lt;section class=&amp;quot;section&amp;quot;&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+    &amp;lt;/section&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;css文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden; /* 清除浮动 */
+}
+.nav{
+    width: 200px;
+    background-color: #33ff857a;
+    float: left;
+}
+.section{
+    background-color: #ef348a57;
+    overflow: auto;
+}
+.nav, .section{
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;两栏模型-二&#34;&gt;两栏模型(二)&lt;/h3&gt;
+
+&lt;p&gt;左边固定宽度，右边自适应的两栏布局。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;左侧浮动，右侧宽度自适应，右侧margin让出左侧宽度。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;html文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;nav class=&amp;quot;nav&amp;quot;&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+    &amp;lt;/nav&amp;gt;
+    &amp;lt;section class=&amp;quot;section&amp;quot;&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+    &amp;lt;/section&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;css文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body{
+    min-width: 630px;
+}
+.container{
+    overflow: hidden; /* 清除浮动 */
+}
+.nav{
+    width: 200px;
+    background-color: #33ff857a;
+    float: left;
+}
+.section{
+    background-color: #ef348a57;
+    width: 100%; 
+    margin-left: 200px;
+}
+.nav, .section{
+    padding-bottom: 2000px; 
+    margin-bottom: -2000px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;两栏模型-三&#34;&gt;两栏模型(三)&lt;/h3&gt;
+
+&lt;p&gt;左边固定宽度，右边自适应的两栏布局。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;父元素相对位置，左侧绝对位置，右侧宽度自适应，右侧margin让出左侧宽度。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;html文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;nav class=&amp;quot;nav&amp;quot;&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+    &amp;lt;/nav&amp;gt;
+    &amp;lt;section class=&amp;quot;section&amp;quot;&amp;gt;
+        &amp;lt;div&amp;gt;test1&amp;lt;/div&amp;gt;
+    &amp;lt;/section&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;css文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body{
+    min-width: 630px;
+}
+.container{
+    position: relative;
+}
+.nav{
+    width: 200px;
+    background-color: #33ff857a;
+    position: absolute;
+}
+.section{
+    background-color: #ef348a57;
+    margin-left: 200px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;水平居中&#34;&gt;水平居中&lt;/h3&gt;
+
+&lt;p&gt;水平居中的三种方式。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;margin: auto；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;元素盒模型变为行内块，父元素使用text-align: center；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;定位，元素绝对定位，向右偏移50%，再反向移动元素宽度的一半；&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;html文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;center1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;center2-father&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;center2&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;center3-father&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;center3&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;css文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body{
+    min-width: 630px;
+}
+.center1{
+    width: 100px;
+    height: 100px;
+    background-color: #33ff857a;
+    margin: auto;
+}
+
+.center2-father{
+    text-align: center;
+}
+.center2{
+    width: 100px;
+    height: 100px;
+    background-color: #fff144a6;
+    display: inline-table;
+}
+
+.center3-father{
+    position: relative;
+}
+.center3{
+    width: 100px;
+    height: 100px;
+    background-color: #ef348a57;
+    position: absolute;
+    left: 50%; /* 先向右偏移容器的一半 */
+    margin-left: -50px;  /* 再反向移动元素宽度的一半 */
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;垂直居中&#34;&gt;垂直居中&lt;/h3&gt;
+
+&lt;p&gt;垂直居中的三种方式。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;line-height与height相等；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;父元素为table，子元素为table-cell，vertical-align: middle；&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;定位，元素绝对定位，向下偏移50%，再反向移动元素高度的一半；&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;html文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;center1-father&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;center1&amp;quot;&amp;gt;center1&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;center2-father&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;center2&amp;quot;&amp;gt;center2&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;center3-father&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;center3&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;css文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body{
+    min-width: 630px;
+}
+.center1-father{
+    width: 100px;
+    height: 100px;
+    background-color: #33ff857a;
+    line-height: 100px;
+}
+
+.center2-father{
+    display: table;
+    margin-bottom: 50px;
+}
+.center2{
+    width: 100px;
+    height: 100px;
+    background-color: #fff144a6;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.center3-father{
+    position: relative;
+}
+.center3{
+    width: 100px;
+    height: 100px;
+    background-color: #ef348a57;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
       <title>How to Understand Package JSON</title>
-      <link>http://localhost:1313/posts/how-to-understand-package-json/</link>
+      <link>https://example.com/2019/how-to-understand-package-json/</link>
       <pubDate>Sun, 17 Mar 2019 10:06:45 +1100</pubDate>
       
-      <guid>http://localhost:1313/posts/how-to-understand-package-json/</guid>
-      <description>package.json文件 对于自定义模块，需要package.json文件，用于描述模块。
-好处 1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载； 2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况； 3. 方便通过 npm publish 发布到NPM库，供别人下载使用。  生成package.json文件 ** npm init **
-This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &amp;lt;pkg&amp;gt;` afterwards to install a package and save it as a dependency in the package.</description>
+      <guid>https://example.com/2019/how-to-understand-package-json/</guid>
+      <description>
+
+&lt;h3 id=&#34;package-json文件&#34;&gt;package.json文件&lt;/h3&gt;
+
+&lt;p&gt;对于自定义模块，需要package.json文件，用于描述模块。&lt;/p&gt;
+
+&lt;h3 id=&#34;好处&#34;&gt;好处&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;1. 方便将项目中的模块分享给他人，通过npm install将依赖的模块下载；
+2. 方便记录所依赖模块的版本号，避免依赖模块的新版本与项目不兼容，导致运行不了的情况；
+3. 方便通过 npm publish 发布到NPM库，供别人下载使用。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;生成package-json文件&#34;&gt;生成package.json文件&lt;/h3&gt;
+
+&lt;p&gt;** npm init **&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &amp;lt;pkg&amp;gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (react-test) react-test  ### 项目名称，必要字段  ###
+version: (1.0.0)                       ### 项目版本号，必要字段  ### 
+description: this is a react test      ### 项目描述   ### 
+entry point: (index.js)                ### 入口文件   ### 
+test command:                          ### 项目启动时的脚本命令  ### 
+git repository:                        ### 如果有git地址，可以将这个项目放到GIT仓库里  ### 
+keywords: react,key                    ### 关键词   ### 
+author: limeigou                       ### 作者    ### 
+license: (ISC)                         ### 发布时需要的证书   ### 
+
+About to write to /Users/gou/Desktop/gou/react-test/package.json:  ###  生成的package.json预览  ###
+
+{
+&amp;quot;name&amp;quot;: &amp;quot;react-test&amp;quot;,
+&amp;quot;version&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+&amp;quot;description&amp;quot;: &amp;quot;this is a react test&amp;quot;,
+&amp;quot;main&amp;quot;: &amp;quot;index.js&amp;quot;,
+&amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+},
+&amp;quot;keywords&amp;quot;: [
+    &amp;quot;react&amp;quot;,
+    &amp;quot;key&amp;quot;
+],
+&amp;quot;author&amp;quot;: &amp;quot;limeigou&amp;quot;,
+&amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;
+}
+
+
+Is this OK? (yes) yes    ###   若符合预期，输入yes  ###
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;属性说明&#34;&gt;属性说明&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+&amp;quot;name&amp;quot;: &amp;quot;react-test&amp;quot;,                     ### 项目名称，必要字段  ###
+&amp;quot;version&amp;quot;: &amp;quot;1.0.0&amp;quot;,                       ### 项目版本号，必要字段  ###
+&amp;quot;description&amp;quot;: &amp;quot;this is a react test&amp;quot;,    ### 项目描述,可无   ###
+&amp;quot;main&amp;quot;: &amp;quot;index.js&amp;quot;,                       ### 模块的入口，知该载入哪个文件   ###
+&amp;quot;scripts&amp;quot;: {                              ### 项目启动时的脚本命令，npm run dev, npm run build  ### 
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;，
+    &amp;quot;build&amp;quot;: &amp;quot;webpack&amp;quot;,
+    &amp;quot;dev&amp;quot;: &amp;quot;webpack-dev-server --hot&amp;quot;
+},
+&amp;quot;keywords&amp;quot;: [                             ### 关键词,可无  ### 
+    &amp;quot;react&amp;quot;,
+    &amp;quot;key&amp;quot;
+],
+&amp;quot;author&amp;quot;: &amp;quot;limeigou&amp;quot;,                     ### 作者,可无   ###
+&amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;，                        ### 发布时需要的证书   ###
+&amp;quot;devDependencies&amp;quot;: {                      ### 生产环境下，依赖的模块   ###
+    &amp;quot;webpack&amp;quot;: &amp;quot;^4.29.5&amp;quot;,
+    &amp;quot;webpack-dev-server&amp;quot;: &amp;quot;^3.1.14&amp;quot;
+}，
+&amp;quot;dependencies&amp;quot;: {                        ### 开发环境下，依赖的模块   ###
+    &amp;quot;react&amp;quot;: &amp;quot;^15.6.2&amp;quot;,
+    &amp;quot;react-dom&amp;quot;: &amp;quot;^15.6.2&amp;quot;
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
   </channel>
